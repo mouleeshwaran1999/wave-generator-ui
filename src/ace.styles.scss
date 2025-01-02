@@ -1,0 +1,16 @@
+.ace-container {
+  display: flex;
+  &-output {
+    background-color: #eee;
+    width: 100%;
+  }
+}
+.execute {
+  margin-top: 10px;
+  padding-bottom: 0.375rem;
+  padding-top: 0.35rem;
+  background-color: rgb(253 82 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  font-size: 1rem;
+}
