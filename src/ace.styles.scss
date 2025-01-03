@@ -1,8 +1,16 @@
 .ace-container {
   display: flex;
   &-output {
+    display: flex;
+    justify-content: center;
+    align-items: start;
     background-color: #eee;
     width: 100%;
+    padding: 0.5rem;
+  }
+  &-errormessage {
+    color: #f00;
+    font-size: 1.2rem;
   }
 }
 .execute {

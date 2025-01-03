@@ -10,7 +10,7 @@ import WavedromComponent from "./wavedrom.component";
 const AceEditorComponent = () => {
   const { codeData, apiHandler, onChangeHandler, errorMessage, waveformData } =
     useAceEditorHook();
-  console.log("errorMessage", errorMessage);
+  console.log("errorMessage", waveformData);
 
   return (
     <>
@@ -26,11 +26,13 @@ const AceEditorComponent = () => {
         </div>
         <div className="ace-container-output">
           {errorMessage ? (
-            errorMessage
+            <p className="ace-container-errormessage">{errorMessage}</p>
           ) : (
             <>
               {Object.keys(waveformData).length ? (
                 <WavedromComponent waveformData={waveformData} />
+              ) : codeData.length < 0 ? (
+                "code exeuted successfully"
               ) : null}
             </>
           )}
